@@ -1,1 +1,457 @@
-/* No CSS */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+abbr,
+cite,
+em,
+img,
+q,
+samp,
+sub,
+sup,
+var,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+article,
+aside,
+canvas,
+footer,
+header,
+nav,
+ruby,
+section,
+time,
+mark,
+audio,
+video {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+/* Improve readability when focused and also mouse hovered in all browsers. */
+a:active,
+a:hover,
+:focus {
+  outline: 0;
+}
+
+/* Delete reference decoration*/
+a {
+  text-decoration: none;
+}
+
+/* Improve readability and alignment in all browsers. */
+textarea {
+  vertical-align: top;
+  resize: vertical;
+}
+
+/* Correct the line height in all browsers.
+Prevent adjustments of font size after orientation changes in iOS. */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Render the `main` element consistently in IE. */
+main {
+  display: block;
+}
+
+/* Add the correct font weight in Chrome, Edge, and Safari.*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/* Remove the border on images inside links in IE 10. */
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+/* Change the font styles in all browsers. Remove the margin in Firefox and Safari. */
+button, input,
+select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* Show the overflow in IE. */
+button, input {
+  overflow: visible;
+}
+
+/* Remove the inheritance of text transform in browsers. */
+button, select {
+  text-transform: none;
+}
+
+/* Correct the inability to style clickable types in iOS and Safari. */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/* Remove the inner border and padding in Firefox. */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera.*/
+progress {
+  vertical-align: baseline;
+}
+
+/* Remove the default vertical scrollbar in IE 10+. */
+textarea {
+  overflow: auto;
+}
+
+/* Add the correct box sizing in IE 10. Remove the padding in IE 10. */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Correct the cursor style of increment and decrement buttons in Chrome. */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* Correct the odd appearance in Chrome and Safari. Correct the outline style in Safari.*/
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/* Remove the inner padding in Chrome and Safari on macOS. */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+  display: flex;
+  font-family: 'Lato', sans-serif;
+}
+
+.navbar {
+  width: 5.1%;
+  height: 100%;
+  background: linear-gradient(#CA6C50, #FD5272);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(0, 0, 0, 0.8), 23px 0 4px -23px rgba(0, 0, 0, 0.8), 0 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  width: 100%;
+  padding: 23px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border-right: 1px solid #F1F1F1;
+}
+
+.navbar .logo .logo__link {
+  font-family: 'Deftone Stylus', arial;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #FD7858;
+  text-decoration: none;
+}
+
+.navbar .nav__menu {
+  margin-top: 30px;
+  height: 89.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar .nav__menu .nav__menu--item {
+  position: relative;
+}
+
+.navbar .nav__menu .menu__link {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.navbar .nav__menu .active::before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  content: "";
+  top: 6%;
+  right: -10px;
+  background: #CA6C50;
+  color: #CA6C50;
+}
+
+.navbar .nav__menu .active::after {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  content: "";
+  top: 7%;
+  right: -10px;
+  background: #CA6C50;
+  color: #CA6C50;
+}
+
+.navbar .nav__menu .link__img {
+  margin-bottom: 10px;
+}
+
+.navbar .nav__menu .link__img--exit {
+  padding-bottom: 10px;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.header .header__section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .header__section--item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .section__item--link {
+  display: flex;
+  width: 100%;
+}
+
+.header .item__link--search {
+  position: relative;
+  padding: 0px 140px;
+  border-right: 1px solid #F1F1F1F1;
+}
+
+.header .item__link--search .search {
+  width: 300px;
+  height: 34px;
+  padding: 13px;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid #C8C8C8;
+  background: #F8F8F8;
+}
+
+.header .item__link--search .search::placeholder {
+  font-size: 12px;
+  color: #C8C8C8;
+}
+
+.header .item__link--search:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: calc(50% - 137px);
+  width: 16px;
+  height: 16px;
+  background: url(./../../../dist/img/header/icon/search.png) no-repeat center/cover;
+}
+
+.header .item__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 35px 30px;
+  border-right: 1px solid #F1F1F1;
+  background-clip: content-box;
+}
+
+.header .item__link .pointer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px;
+  width: 33px;
+  height: 18px;
+  background: linear-gradient(270deg, #fc7858, #fd4e75);
+  border-radius: 30px;
+}
+
+.header .item__link .pointer span {
+  width: 8px;
+  height: 8px;
+  text-align: center;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+.header .item__link .pointer span::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 5px;
+  left: 5px;
+  text-align: center;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+.header .item__link .pointer span::after {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 5px;
+  right: 5px;
+  text-align: center;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+.header .item__link.folders {
+  background: url(./../../../dist/img/header/icon/folders.png) no-repeat center;
+}
+
+.header .item__link.sliders {
+  background: url(./../../../dist/img/header/icon/sliders.png) no-repeat center;
+}
+
+.header .item__link.unloading {
+  background: url(./../../../dist/img/header/icon/unloading.png) no-repeat center;
+}
+
+.header .item__link.mail {
+  background: url(./../../../dist/img/header/icon/mail.png) no-repeat center;
+}
+
+.header .item__link.earth {
+  background: url(./../../../dist/img/header/icon/earth.png) no-repeat center;
+}
+
+.header .section__user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .section__user .section__user--img {
+  margin-right: 15px;
+}
+
+.header .section__user .section__user--about {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .section__user .user__about--name {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #7F7F7F;
+}
+
+.header .section__user .user__about--proffesion {
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: #7F7F7F;
+}
+
+.header .section__user .section__user--other {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .section__user .point {
+  width: 5px;
+  height: 5px;
+  margin-bottom: 3px;
+  background: #BFBFBF;
+  border-radius: 50%;
+}
+
+.header .section__user .point:first-child {
+  margin-top: 3px;
+}
+
+.header .section__user .point:last-child {
+  margin-bottom: 0;
+}
